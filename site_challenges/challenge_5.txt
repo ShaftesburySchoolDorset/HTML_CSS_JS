@@ -1,0 +1,2 @@
+400 x 400px square in the middle and center of the page
+background colour of the square -> #3FAF82;
