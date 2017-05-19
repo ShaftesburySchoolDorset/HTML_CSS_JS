@@ -9,26 +9,22 @@
             @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
 
             .frame {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 400px;
-            height: 400px;
-            margin-top: -200px;
-            margin-left: -200px;
-            border-radius: 2px;
-            box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.12);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 400px;
+                height: 400px;
+                margin-top: -200px;
+                margin-left: -200px;
+                border-radius: 2px;
+                box-shadow: 1px 2px 10px 0px rgba(0,0,0,0.12);
                 overflow: hidden;
-            background: #BDCEDB;
-            color: #fff;
+                background: #BDCEDB;
+                color: #fff;
                 font-family: 'Open Sans', Helvetica, sans-serif;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
                 perspective: 150px;
-            }
-
-            .cb {
-                display: none;
             }
 
             .button {
@@ -53,40 +49,26 @@
             }
 
             .front {
-                    box-sizing: border-box;
-                    position: absolute;
-                    display: block;
-                    z-index: 2;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    color: #34495E;
-                    background: #fff;
-                    border: 2px solid #fff;
-                    border-radius: 25px;
-                    backface-visibility: hidden;
-                    transform: rotateX(0);
+                box-sizing: border-box;
+                position: absolute;
+                display: block;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                color: #34495E;
+                background: #fff;
+                border: 2px solid #fff;
+                border-radius: 25px;
+                backface-visibility: hidden;
+                transform: rotateX(0);
                 }
-                
-                .back {
-                    @extend .front;
-                    z-index: 1;
-                    color: #fff;
-                    background: #64C760;
-                    border: 2px solid #fff;
-                    transform: rotateX(180deg);
-                }
-
-            .cb:checked ~ .button {
-                transform: rotateX(180deg);
-                box-shadow: 4px -8px 12px 0 rgba(0,0,0,0.1);
-            }
         </style>
     </head>
     <body>
         <div class="frame">
-            <label class="button"for="cb"><span class="front">send</span></label>
+            <label class="button"><span class="front">send</span></label>
         </div>
     </body>
 </html>
