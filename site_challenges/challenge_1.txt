@@ -1,0 +1,7 @@
+
+background colour -> #AB47BC;
+text color -> #ffeb3b
+font-family -> Arial, Helvetica, sans-serif
+purpble box height -> 500px
+font size -> 40px
+font -> bold and italic
