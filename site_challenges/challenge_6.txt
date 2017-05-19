@@ -3,3 +3,5 @@ A form button in the middle of a box, which is in the middle of the page. Feel f
 Box is 400 x 400px, with background colour #BDCEDB.
 
 The text is open sans (https://fonts.googleapis.com/css?family=Open+Sans:600), colour: #34495E;
+
+The button is 100 x 50px.
