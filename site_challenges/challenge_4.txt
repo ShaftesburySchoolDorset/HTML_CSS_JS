@@ -1,0 +1,5 @@
+Red -> #ef5350
+Green -> #9ccc65
+Blue -> #2196f3
+
+Three rectangles, all of equal width. Altogether they fill the entire page!

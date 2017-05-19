@@ -1,0 +1,3 @@
+Spacing between window top and text -> 200px
+Font -> 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+Font size -> 40px
