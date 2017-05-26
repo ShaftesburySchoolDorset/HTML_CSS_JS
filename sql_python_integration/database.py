@@ -1,28 +1,19 @@
-import pymysql.cursors
-
-# Connect to the database
-connection = pymysql.connect(host='db-learn.gec.io',
-                             user='gco_test',
-                             password='go_apple!',
-                             db='teacher',
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
+mport sqlite3
+conn = sqlite3.connect('database.db')
 
 try:
-    with connection.cursor() as cursor:
-        # Create a new record
-        sql = "INSERT INTO `TblUsers` (`name`, `password`) VALUES (%s, %s)"
-        cursor.execute(sql, ('newbie', 'very-secret'))
+    c = conn.cursor()
 
-    # connection is not autocommit by default. So you must commit to save
-    # your changes.
-    connection.commit()
+    # Insert a row of data
+    c.execute("INSERT INTO TblUsers VALUES ('john smith','password')")
+    conn.commit()
 
-    with connection.cursor() as cursor:
-        # Read a single record
-        sql = "SELECT `user_id`, `password` FROM `TblUsers` WHERE `name`=%s"
-        cursor.execute(sql, ('Santa',))
-        result = cursor.fetchone()
-        print(result)
+    # Retrieve a row of data
+    t = ('john smith',)
+    c.execute('SELECT * FROM TblUsers WHERE name=?', t)
+    print(c.fetchone())
+
 finally:
-    connection.close()
+    # We can also close the connection if we are done with it.
+    # Just be sure any changes have been committed or they will be lost.
+    conn.close()
