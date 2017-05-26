@@ -5,18 +5,47 @@
 
 <head>
 	<title>Javascript Test</title>
+	<script>
+		var x = 50
+		var y = 100
+		var z = 200
+	</script>
 </head>
 
 <body>
 	<canvas id="ctx" width="500" height="500" style="border:1px solid #000000;"></canvas>
-</body>
+
 	<script>
-		var ctx = document.getElementById("ctx").getContext("2d");
-		var x = 50
-		var y = 100
-		var z = 200
+		var canvas = document.getElementById("ctx")
+		document.addEventListener("keydown", doKeyDown)
+
+		function doKeyDown(e) {
+			if (e.keyCode == '67') {
+				clearCanvas()
+			}
+
+			if (e.keyCode == '87') {
+				clearCanvas()
+				x = x - 5
+				y = y - 5
+				z = z - 5
+
+				ctx.fillRect(x, x, x, x);
+				ctx.fillRect(y, y, y, y);
+				ctx.fillRect(z, z, z, z);
+			}
+		}
+		var ctx = canvas.getContext("2d");
 		ctx.fillRect(x, x, x, x);
 		ctx.fillRect(y, y, y, y);
 		ctx.fillRect(z, z, z, z);
+
+
+
+		function clearCanvas() {
+			canvas.width = '500'
+		}
 	</script>
+</body>
+
 </html>
